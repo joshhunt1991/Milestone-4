@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-7)kkk$^nkl3(x2$+!hdkwr-ojq!6b3jw+)p%i)c-z!7b%wl&6w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://titan-strength.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['titan-strength.herokuapp.com', 'localhost']
 
 
 # Application definition
