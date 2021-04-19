@@ -1,9 +1,18 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;500&display=swap');
+
+
+
 html {
     height: 100%;
 }
 
 body {
+    background: url('/media/main-page.png') no-repeat center center fixed;
+    background-size: cover;
     height: calc(100vh - 164px);
+    font-family: 'Antonio', sans-serif;
+    font-weight: 500;
 }
 
 /* from Bulma */
@@ -19,9 +28,10 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
+.start-shopping-btn {
+    background: gold;
+    font-size: 2em;
+    color: #000000;
     min-width: 260px;
 }
 
