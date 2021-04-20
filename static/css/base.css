@@ -10,6 +10,26 @@
     font-size: 3em;
 }
 
+.name-text {
+    font-size: 2em;
+    color: gold;
+}
+
+.price-text {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.rating-text {
+    font-size: 1.5em;
+    color: gold;
+}
+
+.description-text {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
 /* general */
 
 .header-container {
@@ -35,6 +55,16 @@ body {
     left: 0;
     position: fixed;
     background: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+}
+
+.info-cover {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0);
     z-index: -1;
 }
 
