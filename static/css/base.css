@@ -1,5 +1,6 @@
 /* fonts and text formatting */
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .text-black {
     color: #000 !important;
@@ -11,6 +12,10 @@
 
 .text-gold {
     color: gold;
+}
+
+.text-red {
+    color: #ff0000;
 }
 
 .header-font {
@@ -36,6 +41,7 @@
 .description-text {
     font-size: 1.2em;
     color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .table-header-text {
