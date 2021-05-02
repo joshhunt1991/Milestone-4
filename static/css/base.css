@@ -11,7 +11,7 @@
 }
 
 .text-gold {
-    color: gold;
+    color: #d4af37;
 }
 
 .text-red {
@@ -19,13 +19,13 @@
 }
 
 .header-font {
-    color: gold;
+    color: #d4af37;
     font-size: 3em;
 }
 
 .name-text {
     font-size: 2em;
-    color: gold;
+    color: #d4af37;
 }
 
 .price-text {
@@ -35,7 +35,7 @@
 
 .rating-text {
     font-size: 1.5em;
-    color: gold;
+    color: #d4af37;
 }
 
 .description-text {
@@ -46,12 +46,22 @@
 
 .table-header-text {
     font-size: 1.2em;
-    color: gold;
+    color: #d4af37;
 }
 
 .table-item-text {
     font-size: 1em;
     color: #ffffff;
+}
+
+.total-text {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.grand-total-text {
+    font-size: 2em;
+    margin-right: 10px;
 }
 
 /* general */
@@ -119,7 +129,7 @@ body {
 /* buttons */
 
 .start-shopping-btn {
-    background: gold;
+    background: #d4af37;
     font-size: 2em;
     color: #000000;
     min-width: 260px;
@@ -152,10 +162,12 @@ body {
     right: 10px;
     border: solid 2px #000000;
     border-radius: 10px;
-    background-color: gold;
+    background-color: #d4af37;
 }
 
-.btt-link {
+.btt-link,
+.update,
+.remove {
     cursor: pointer;
 }
 
@@ -163,6 +175,22 @@ body {
     font-size: 2em;
 }
 
+.delete-btn {
+    font-size: 2em;
+}
+
+.delete-btn:hover {
+    color: #ff6666;
+}
+
+.update-btn {
+    font-size: 2em;
+    color: #00ff00;
+}
+
+.update-btn:hover {
+    color: #008000;
+}
 
 /* -------------------------------- Media Queries */
 

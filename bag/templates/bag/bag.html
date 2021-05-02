@@ -56,7 +56,7 @@
                                             <button class="decrement-qty btn btn-sm btn-black rounded-0"
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
+                                                    <i class="fas fa-minus-square"></i>
                                                 </span>
                                             </button>
                                         </div>
@@ -67,7 +67,7 @@
                                             <button class="increment-qty btn btn-sm btn-black rounded-0"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
+                                                    <i class="fas fa-plus-square"></i>
                                                 </span>
                                             </button>
                                         </div>
@@ -77,9 +77,10 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item float-right" id="remove_{{ item.item_id }}"
-                                data-size="{{ item.size }}"><i class="fas fa-trash-alt text-red"></i></a>
+                            <p class="text-white">update quantity</p>
+                            <a class="update"><i class="fas update-btn fa-check-square"></i></a>
+                            <a class="remove float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i
+                                    class="fas fa-trash-alt delete-btn text-red"></i></a>
                         </td>
                         <td class="py-3">
                             <p class="text-white table-header-text my-0">${{ item.product.price }}</p>
@@ -88,29 +89,24 @@
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-white text-right">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                            {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
-                                more!
-                            </p>
-                            {% endif %}
+                            <p class="text-gold total-text">Bag Total: ${{ total|floatformat:2 }}</p>
+                            <p class="text-gold total-text">Delivery: ${{ delivery|floatformat:2 }}</p>
+                            <h4 class="mt-4 grand-total-text"><strong>Grand Total:
+                                    ${{ grand_total|floatformat:2 }}</strong></h4>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                 <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
+                                    <i class="fas text-gold fa-backward"></i>
                                 </span>
                                 <span class="text-gold text-uppercase">Keep Shopping</span>
                             </a>
                             <a href="" class="btn btn-black rounded-0 btn-lg">
-                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="text-uppercase text-gold">Secure Checkout</span>
                                 <span class="icon">
-                                    <i class="fas fa-lock"></i>
+                                    <i class="fas text-gold fa-dumbbell"></i>
                                 </span>
                             </a>
                         </td>
@@ -130,4 +126,35 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity
+    $('.update').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload
+    $('.remove').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('size');
+        var url = `/bag/remove/${itemId}`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+            'size': size
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+
 {% endblock %}
