@@ -64,6 +64,10 @@
     margin-right: 10px;
 }
 
+.badge-text {
+    font-size: 1.5em;
+}
+
 /* general */
 
 html {
@@ -76,6 +80,14 @@ body {
     height: calc(100vh - 164px);
     font-family: 'Antonio', sans-serif;
     font-weight: 500;
+}
+
+.no-margins {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
 }
 
 .translucent-cover {
@@ -124,6 +136,14 @@ body {
 .bag-table {
     background: rgba(0, 0, 0, 0.75);
     border: solid 3px black;
+}
+
+.desc-container {
+    margin-bottom: 40px !important;
+}
+
+.prod-detail-row {
+    padding-bottom: 40px !important;
 }
 
 /* buttons */
