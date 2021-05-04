@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -71,19 +72,17 @@
                                                 </span>
                                             </button>
                                         </div>
-                                        {% if item.product.has_sizes %}
-                                        <input type="hidden" name="product_size" value="{{ item.size }}">
-                                        {% endif %}
                                     </div>
                                 </div>
                             </form>
                             <p class="text-white">update quantity</p>
-                            <a class="update"><i class="fas update-btn fa-check-square"></i></a>
+                            <a class="update-item"><i class="fas update-btn fa-check-square"></i></a>
                             <a class="remove-item float-right" id="remove_{{ item.item_id }}"><i
                                     class="fas fa-trash-alt delete-btn text-red"></i></a>
                         </td>
                         <td class="py-3">
-                            <p class="text-white table-header-text my-0">${{ item.product.price }}</p>
+                            <p class="text-white table-header-text my-0">
+                                ${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -135,7 +134,7 @@
 <script type="text/javascript">
     // Update quantity on click
     $('.update-item').click(function (e) {
-        var form = $(this).prev('.update-form');
+        var form = $(this).prev().prev('.update-form');
         form.submit();
     })
 
