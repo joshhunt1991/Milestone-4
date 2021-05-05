@@ -82,6 +82,10 @@ body {
     font-weight: 500;
 }
 
+.gold-bg {
+    background-color: #d4af37;
+}
+
 .no-margins {
     margin: 0 !important;
 }
@@ -144,6 +148,23 @@ body {
 
 .prod-detail-row {
     padding-bottom: 40px !important;
+}
+
+/* bootstrap toasts */
+
+.toast-style {
+    overflow: visible;
+}
+
+.message-container {
+    right: 15px;
+    top: 150px;
+    z-index: 99999999999;
+    position: fixed;
+}
+
+.toast-capper {
+    height: 10px;
 }
 
 /* buttons */
