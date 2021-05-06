@@ -167,6 +167,17 @@ body {
     height: 10px;
 }
 
+.success-wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 150px;
+}
+
+.cash-total {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
 /* buttons */
 
 .start-shopping-btn {
