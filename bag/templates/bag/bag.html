@@ -22,7 +22,7 @@
     </div>
 
     <div class="row">
-        <div class="col">
+        <div class="col no-padding">
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="bag-table table-borderless table table-sm">
@@ -48,7 +48,7 @@
                                 {{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="mobile-price text-white table-header-text my-0">${{ item.product.price }}</p>
+                            <p class="mobile-header text-white table-header-text my-0">${{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
@@ -82,7 +82,7 @@
                                     class="fas fa-trash-alt delete-btn text-red"></i></a>
                         </td>
                         <td class="py-3">
-                            <p class="mobile-price text-white table-header-text my-0">
+                            <p class="mobile-header text-white table-header-text my-0">
                                 ${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>

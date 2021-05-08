@@ -1,3 +1,7 @@
+body {
+    background-color: red;
+}
+
 #payment-form .form-control,
 #card-element {
     color: #000;
