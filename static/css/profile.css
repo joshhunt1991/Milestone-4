@@ -14,3 +14,7 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.order-table {
+    max-height: 460px;
+}
