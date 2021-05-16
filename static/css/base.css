@@ -138,6 +138,10 @@ body {
     max-width: 540px;
 }
 
+input[name='q']::placeholder {
+    color: #000000;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -261,8 +265,6 @@ body {
 }
 
 /* allauth formatting */
-
-/* Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
