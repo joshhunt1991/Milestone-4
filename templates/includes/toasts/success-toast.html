@@ -13,7 +13,7 @@
                 {{ message }}
             </div>
         </div>
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
         <p>Total items ({{ product_count }})</p>
         <div class="success-wrapper">
             {% for item in bag_items %}
