@@ -1,0 +1,23 @@
+Hello {{ order.full_name }}
+
+This is confirmation of your order at Titan Strength. You will find your order information below:
+
+Order Date: {{ order.date }}
+Order Number: {{ order.order_number }}
+
+
+Order Total: ${{ order.order_total }}
+Delivery: ${{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+Your phone number - {{ order.phone_number }}.
+
+Feel free to contact us with any questions {{ contact_email }}.
+
+Thanks for ordering!
+
+Sincerely,
+
+Titan Strength
