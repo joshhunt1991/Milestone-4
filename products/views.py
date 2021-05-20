@@ -10,8 +10,20 @@ from .forms import ProductForm
 
 def add_product(request):
     # allows user to add a new product to the store
-    form = ProductForm()
     template = 'products/add_product.html'
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, 'Failed to add product. Please ensure the form is filled in correctly.')  # noqa
+    else:
+        form = ProductForm()
+
     context = {
         'form': form,
     }
@@ -19,8 +31,45 @@ def add_product(request):
     return render(request, template, context)
 
 
+def edit_product(request, product_id):
+    # view for editing products in the store
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product Successfuly updated!')
+            return redirect(reverse('product_detail', args=[product.id]))
+
+        else:
+            messages.error(
+                request, 'Failed to update product. Please ensure the form is correctly filled out.')  # noqa
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'Editing product:  {product.name}')
+
+    template = 'products/edit_product.html'
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    # view to remove a product from the store
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'You have deleted a product')
+    return redirect(reverse('products'))
+
+
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    # Shows all products, sorting and search queries
 
     products = Product.objects.all()
     sort = None
@@ -71,7 +120,7 @@ def all_products(request):
 
 
 def product_info(request, product_id):
-    """ shows individual products and information """
+    # Shows individual products and information
 
     product = get_object_or_404(Product, pk=product_id)
 
