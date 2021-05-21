@@ -10,26 +10,33 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
+<div class="translucent-cover"></div>
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6">
             <hr>
-            <h2 class="logo-font mb-4">Product Management</h2>
-            <h5 class="text-muted">Edit a Product</h5>
+            <h2 class="header-font text-gold mb-4">Product Management</h2>
+            <h5 class="text-white table-header-text">Edit a Product</h5>
             <hr>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="text-gold table-header-text"
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Update Product</button>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas text-gold fa-backward"></i>
+                        </span>
+                        <span class="text-gold text-uppercase">Cancel</span>
+                    </a>
+                    <button class="btn gold-bg text-uppercase text-black" type="submit">
+                        <span>Update</span>
+                    </button>
                 </div>
             </form>
         </div>
