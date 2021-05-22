@@ -70,6 +70,20 @@
 
 /* general */
 
+.landing-text {
+    font-size: 1.2em;
+}
+
+.landing-message-container {
+    height: 100px;
+}
+
+.landing-message {
+    margin-top: 80px;
+    background-color: #000000;
+    height: 100%;
+}
+
 html {
     height: 100%;
 }
@@ -319,6 +333,39 @@ input[name='q']::placeholder {
     /* text-info */
 }
 
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+.navbar-toggler {
+    background-color: #6d5919;
+    border: 2px solid #d4af37 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -359,5 +406,14 @@ input[name='q']::placeholder {
     .mobile-price {
         font-size: 0.8em;
         color: #d4af37 !important;
+    }
+}
+
+/* screens above 992px */
+
+@media (min-width: 992px) {
+
+    .landing-message-container {
+        display: none;
     }
 }
