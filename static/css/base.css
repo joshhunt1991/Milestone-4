@@ -278,6 +278,14 @@ input[name='q']::placeholder {
     color: #008000;
 }
 
+.btn {
+    margin-bottom: 20px;
+}
+
+.list-inline-item {
+    margin-right: 0 !important;
+}
+
 /* allauth formatting */
 
 .allauth-form-inner-content p {
