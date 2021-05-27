@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -12,7 +10,6 @@
     </div>
 </div>
 {% endblock %}
-
 {% block content %}
 <div class="translucent-cover"></div>
 <div class="container">
@@ -23,7 +20,8 @@
             <hr>
             <hr>
             <p class="description-text text-white">Your order is complete. A confirmation email will be sent to
-                <span class="text-gold">{{ order.email }}</span></p>
+                <span class="text-gold">{{ order.email }}</span>
+            </p>
         </div>
     </div>
     <div class="col-12 col-lg-7 text-right">

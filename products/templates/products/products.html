@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -8,7 +7,6 @@
     </div>
 </div>
 {% endblock %}
-
 {% block content %}
 <div class="translucent-cover"></div>
 <div class="container-fluid">
@@ -131,12 +129,9 @@
     </a>
 </div>
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
-
 <!-- sort box javascript -->
-
 <script type="text/javascript">
     $('#sort-selector').change(function () {
         var selector = $(this);
@@ -159,13 +154,10 @@
         }
     })
 </script>
-
 <!-- scroll to top button -->
-
-<script type="text/javascript">
+<script>
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
 </script>
-
 {% endblock %}

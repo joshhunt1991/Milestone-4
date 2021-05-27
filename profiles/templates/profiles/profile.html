@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -12,7 +10,6 @@
     </div>
 </div>
 {% endblock %}
-
 {% block content %}
 <div class="translucent-cover"></div>
 <div class="container">
@@ -73,8 +70,7 @@
         </div>
     </div>
     {% endblock %}
-
     {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+    <script src="{% static 'profiles/js/countryfield.js' %}"></script>
     {% endblock %}

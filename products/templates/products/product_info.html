@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -8,7 +7,6 @@
     </div>
 </div>
 {% endblock %}
-
 {% block content %}
 <div class="info-cover"></div>
 <div class="container-fluid">
@@ -82,7 +80,6 @@
                             </div>
                         </div>
                 </div>
-
                 <div class="col-12">
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                         <span class="icon">
@@ -101,7 +98,6 @@
 </div>
 </div>
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
