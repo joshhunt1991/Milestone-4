@@ -32,12 +32,19 @@ Manual testing for this project was performed continually throughout the develop
 ### Checkout page
 
 [- The first thing I did before checking the validity of my form was to insert the correct information into the form and submitted it with a test card number to confirm that it works.] (/readmelinks/success.png) <br/>
-[- I decided that I would test the key required fields. First for the name I entered a single character name to ensure that the minimum length validation works.] (/readmelinks/success.png) <br/>
+[- I decided that I would test the key required fields. First for the name I entered a single character name to ensure that the minimum length validation works. Validation works as expected.] (/readmelinks/error.png) <br/>
+[- I then decided that I would test the email field by not putting an @ to ensure validation works. Again validation works as expected.] (/readmelinks/error.png) <br/>
+[- I then decided that I would test the address line 1 field by putting a 1 character address. Again validation works as expected.] <br/>
+[- I went through all the required fields leaving them blank to ensure that the form could not be submitted. Again validation works as expected.] <br/>
+[- Typing in invalid credit card numbers works as expected.] (/readmelinks/invalid.png) <br/>
+
 
 
 ### login and registration functionality
 
-[- Not much to check here, everything displays as expected <br/>
+[- First I repeated the checks that I had just done on the checkout form to ensure that Django was taking care of the validation concerns] <br/>
+[- Next I tried to register as an already existing user and that was stopped as expected.] (/readmelinks/error.png) <br/>
+
 
 ### Product management
 
