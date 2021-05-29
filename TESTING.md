@@ -43,23 +43,23 @@ Manual testing for this project was performed continually throughout the develop
 ### login and registration functionality
 
 [- First I repeated the checks that I had just done on the checkout form to ensure that Django was taking care of the validation concerns] <br/>
-[- Next I tried to register as an already existing user and that was stopped as expected.] (/readmelinks/error.png) <br/>
-
+[- Next I tried to register as a new user and that worked.] (/readmelinks/register.png) <br/>
+[- Next I confirmed the email address that was successfully sent to my address.] (/readmelinks/confirm.png) <br/>
+[- Next I signed in.] <br/>
+[- After logging back out I tried to sign up again with the same information.] (/readmelinks/duplicate.png) <br/>
+[- I then logged back in to ensure that the super user links (product management, profile page, and the edit and delete buttons on the all products page and the product information page") don't show up. I also tried going direct through the url to ensure that I am redirected to the sign in page.] <br/>
+[- Finally I logged in as my super user account and ensured that those same buttons were available and that they all worked.] (/readmelinks/duplicate.png) <br/>
 
 ### Product management
 
-[- Reviews are displaying correctly and are paginated] <br/>
-[- Again, I cross checked the displayed reviews with the mongoDB entries to ensure that they are all their and are in the correct order (newest first)] <br/>
-[- I checked that the add review button redirects the user to the add review form <br/>
+[- First I tried to submit a blank form to ensure that the validation is working for that] (/readmelinks/empty.png) <br/>
+[- Next I submitted an actual test product to confirm that the process works] (/readmelinks/testprod.png) <br/>
+[- I then deleted it to test that] <br/>
 
 ### profile page
 
 [- First I tried to submit a blank form to ensure that the validation is working for that] (/readmelinks/add-blank.png) <br/>
-[- As before I realised when testing my validation that I wasn't allowing numbers to be used in the game name which would obviously cause issues, I fixed this and tested it and was correctly redirected to the game images page] <br/>
-[- I then posted multiple reviews testing all the ratings radio buttons to ensure that the stars display correctly on the reviews] <br/>
-[- Next I tested the review text area, I exceeded the character limit and also put less than the necessary amount to test validation] (/readmelinks/too-short.png) <br/>
-[- I filled the form out with gibberish and when no games were found the redirect to the review page and the flash message displayed as expected] (/readmelinks/nogames.png)<br/>
-[- Finally I filled the form out correctly with a game that I know exists and returned the game images page] <br/>
+[- Next I submitted an actual test product to confirm that the process works] (/readmelinks/testprod.png) <br/>
 
 ### Automated email functionality
 
