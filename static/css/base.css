@@ -70,6 +70,10 @@
 
 /* general */
 
+#id_country {
+    min-height: 50px;
+}
+
 .empty-bag-text {
     padding-left: 40px;
 }
