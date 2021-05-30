@@ -58,41 +58,41 @@ Manual testing for this project was performed continually throughout the develop
 
 ### profile page
 
-[- First I tried to submit a blank form to ensure that the validation is working for that] (/readmelinks/add-blank.png) <br/>
-[- Next I submitted an actual test product to confirm that the process works] (/readmelinks/testprod.png) <br/>
+[- Confirmed that the form submits and that blank values can be submitted to clear the form if the user requires] <br/>
+
 
 ### Automated email functionality
 
-[- In the previous section I filled out a review, this review was for call of duty and returned images] (/readmelinks/image-page.png) <br/>
-[- I then selected the correct image and it posted as required] (/readmelinks/posted.png) <br/>
+[- Confirmed that verification emails are sent and that they work in the "login and registration functionality" section]. <br/>
+[- Confirmed that confirmation email is sent when an order is made.] (/readmelinks/posted.png) <br/>
 
 ### Responsive design
 
 Below are some images demonstrating the responsiveness of the webpage on different viewport sizes.
 
 - Desktop sizes: <br/>
-[- image of the homepage](/readmelinks/dhome.png) <br/>
-[- image of the about page](/readmelinks/dabout.png) <br/>
-[- image of how the forms look](/readmelinks/dforms.png) <br/>
-[- image of logged in home page](/readmelinks/dlogged.png) <br/>
-[- image of review slider](/readmelinks/dslider.png) <br/>
-[- image of review page](/readmelinks/dreviews.png) <br/>
+[- image of the homepage](/readmelinks/homedesktop.png) <br/>
+[- image of the products page](/readmelinks/productsdesktop.png) <br/>
+[- image of how the product management page looks](/readmelinks/prodmandesktop.png) <br/>
+[- image of profile](/readmelinks/profiledesktop.png) <br/>
+[- image of shopping bag](/readmelinks/bagdesktop.png) <br/>
+[- image of review page](/readmelinks/checkoutdesktop.png) <br/>
 
 - Tablet sizes: <br/>
-[- image of the homepage](/readmelinks/thome.png) <br/>
-[- image of the about page](/readmelinks/tabout.png) <br/>
-[- image of how the forms look](/readmelinks/tforms.png) <br/>
-[- image of logged in home page](/readmelinks/tlogged.png) <br/>
-[- image of review slider](/readmelinks/tslider.png) <br/>
-[- image of review page](/readmelinks/treviews.png) <br/>
+[- image of the homepage](/readmelinks/hometablet.png) <br/>
+[- image of the products page](/readmelinks/productstablet.png) <br/>
+[- image of how the product management page looks](/readmelinks/prodmantablet.png) <br/>
+[- image of profile](/readmelinks/profiletablet.png) <br/>
+[- image of shopping bag](/readmelinks/bagtablet.png) <br/>
+[- image of review page](/readmelinks/checkouttablet.png) <br/>
 
 - Mobile sizes: <br/>
-[- image of the homepage](/readmelinks/mhome.png) <br/>
-[- image of the about page](/readmelinks/mabout.png) <br/>
-[- image of how the forms look](/readmelinks/mforms.png) <br/>
-[- image of logged in home page](/readmelinks/mlogged.png) <br/>
-[- image of review slider](/readmelinks/mslider.png) <br/>
-[- image of review page](/readmelinks/mreviews.png) <br/>
+[- image of the homepage](/readmelinks/homemobile.png) <br/>
+[- image of the products page](/readmelinks/productsmobile.png) <br/>
+[- image of how the product management page looks](/readmelinks/prodmanmobile.png) <br/>
+[- image of profile](/readmelinks/profilemobile.png) <br/>
+[- image of shopping bag](/readmelinks/bagmobile.png) <br/>
+[- image of review page](/readmelinks/checkoutmobile.png) <br/>
 
 
 This wraps up the manual testing section.
