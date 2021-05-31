@@ -122,10 +122,10 @@ The following security measures were implemented
 
 # Validation and code clean up
 
-- I used W3C mark up validation service to validate my code [W3C Markup Validator](https://validator.w3.org/) <br/>
+- I used W3C mark up validation service to validate my code. There are some remaining errors but I believe them to be due to the way that Django works and not to do with the python code. [W3C Markup Validator](https://validator.w3.org/) <br/>
 - I used freeformatter.com's HTML formatter to format all my code [freeformatter HTML Formatter](https://www.freeformatter.com/html-formatter.html) <br/>
 - I used freeformatter.com's CSS beautifier to beautify all my CSS [freeformatter CSS Beautifier](https://www.freeformatter.com/css-beautifier.html) <br/>
-- I used the command "python3 -m flake8" to bring up a list of linting errors which I worked through and remedied where necessary <br/>
+- I used the command "python3 -m flake8" to bring up a list of linting errors which I worked through and remedied where necessary. There were instances of lines being too long that wouldn't make snese to split up so I have left those ones. <br/>
 
 
 # Features to be implemented in future updates
